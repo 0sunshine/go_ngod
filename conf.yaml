@@ -1,0 +1,23 @@
+log:
+  #6 TraceLevel
+  #5 DebugLevel
+  #4 InfoLevel
+  #3 WarnLevel
+  #2 ErrorLevel
+  #1 FatalLevel
+  #0 PanicLevel
+  level: 4
+
+listen: 18080
+
+serverip: "192.168.11.50"
+r2port: 555
+c1port: 5555
+
+play: #数组
+    - playList: "./ngod.txt" #播放列表路径  pid aid_码率 时间-  推流ip:端口
+      playListSelectType: 0 #播放列表的选择方式: 0顺序  1随机(每次重启不设置时间种子)  2.随机(每次重启设置时间种子)
+      sessMin: 1
+      sessMax: 1
+      sessIncreaseSpeed: 5
+      sessRepeat: 1
